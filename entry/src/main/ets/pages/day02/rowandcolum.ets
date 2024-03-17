@@ -6,7 +6,7 @@ struct Index {
     Row() {
       Column() {
       Text("小说简介").textAlign(TextAlign.Start).width('100%')
-        .height(40)
+        .height(40).fontSize(14).fontWeight(FontWeight.Bold)
         Row(){
           Text('都市').backgroundColor(Color.Orange).width(50)
             .height(30)
