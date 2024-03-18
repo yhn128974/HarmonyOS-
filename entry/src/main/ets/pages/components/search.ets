@@ -1,6 +1,7 @@
 @Component
 export struct Searcher {
   @State message: string = 'there is search bar';
+  // 声明与父类的绑定数据
   @Link isRefresh: boolean;
 
   build() {

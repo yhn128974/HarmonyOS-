@@ -1,7 +1,10 @@
+
+
 @Component
 export struct Content {
   @State message: string = 'there is content ';
-  @Prop isChanged: boolean ;
+  //定义来自父组件的参数
+  @Prop isChanged: boolean;
   @State fruits: Array<string> = ['苹果', '香蕉', '橘子']
 
   build() {
@@ -20,5 +23,25 @@ export struct Content {
       }.width('100%')
     }
   }
-}
 
+
+
+  aboutToAppear(): void {
+    console.log('Content aboutToAppear")')
+  }
+
+  onPageShow(): void {
+    console.log('Content onPageShow")')
+  }
+
+  onBackPress(): boolean | void {
+    console.log('Content onBackPress')
+  }
+
+  onPageHide(): boolean | void {
+    console.log('Content onpageHide')
+  }
+  aboutToDisappear(): void {
+    console.log('Content aboutToDisappear')
+  }
+}
