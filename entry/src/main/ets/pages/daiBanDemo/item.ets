@@ -1,9 +1,13 @@
 @Component
 export struct Item {
   @State message: string = 'Hello World';
-  @State isfished: boolean = false;
+
+  @Prop isfished: boolean ;
   @Prop mession: string;
   @Prop allFished: boolean = false;
+
+
+
 
   build() {
 
@@ -20,11 +24,11 @@ export struct Item {
         Text(this.mession).decoration({
           type: TextDecorationType.LineThrough,
         }).fontColor('#888')
-
       }
     }
     .onClick(() => {
       this.isfished = !this.isfished;
+
     })
     .margin(10)
     .border({

@@ -11,7 +11,6 @@ export struct Title {
           Text(this.message)
             .fontSize(50)
             .fontWeight(FontWeight.Bold).textAlign(TextAlign.Start).margin(10)
-
           Button('全部已完成').onClick((event: ClickEvent) => {
             this.allFished=!this.allFished
           })
