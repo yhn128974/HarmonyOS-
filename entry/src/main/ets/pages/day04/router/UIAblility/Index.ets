@@ -4,6 +4,7 @@ let msg: string = '来自index的数据';
 
 class routerParams {
   src: string
+
   constructor(str: string) {
     this.src = str
   }
@@ -21,14 +22,18 @@ struct Index {
         Text(this.message)
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
-
         Button('NEXT').onClick(() => {
           router.pushUrl({
-            url: 'pages/UIAblility/Second',
+            url: 'pages/day04/router/UIAblility/Second',
             params: {
               msg: msg
             }
-          }, router.RouterMode.Single
+          }, router.RouterMode.Single,
+            err => {
+              if (err) {
+                console.log(`${err.code}`)
+              }
+            }
           )
         })
         Text(this.src)
@@ -37,6 +42,7 @@ struct Index {
     }
     .height('100%')
   }
+
   onPageShow() {
     this.src = (router.getParams() as routerParams).src
   }

@@ -5,6 +5,9 @@ import router from '@ohos.router';
 @Component
 struct Index {
   @State message: string = 'Second Page...';
+  // 已知类型
+  // @State msg: string = (router.getParams() as Record<string, string>)['msg'];
+  // 类型未知
   @State msg: string = (router.getParams() as Record<string, string>)['msg'];
 
   build() {
@@ -22,8 +25,13 @@ struct Index {
           //   message: 'Message Info'
           // });
 
+
+          router.showAlertBeforeBackPage({
+            message: '您的操作还未完成，确定要返回吗'
+          })
+
           router.back({
-            url: 'pages/UIAblility/Index',
+            url: 'pages/day04/router/UIAblility/Index',
             params: {
               src: 'Second页面传来的数据',
             }
