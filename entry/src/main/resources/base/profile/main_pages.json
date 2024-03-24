@@ -4,6 +4,9 @@
     "pages/day04/router/UIAblility/Second",
     "pages/day04/router/UIAblility/Page1",
     "pages/day05/life_circle/page01/Page01",
-    "pages/day05/life_circle/page02/Page2"
+    "pages/day05/life_circle/page02/Page2",
+    "pages/Index",
+    "pages/Document/DocumentPage",
+    "pages/entryPage/entryPageForDoc"
   ]
 }

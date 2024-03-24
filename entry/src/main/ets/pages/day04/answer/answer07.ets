@@ -9,7 +9,7 @@ struct Index {
         Stack({
           alignContent: Alignment.Bottom
         }) {
-          Image($r('app.media.banner')).width('100%').borderRadius(10)
+          Image($r("app.media.banner1")).width('100%').borderRadius(10)
           Column() {
             Text('Apple 如何构建 iCold 来存储数十亿...能够使用margin、padding、space等调整内容位置')
               .fontWeight(800)

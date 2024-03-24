@@ -13,7 +13,6 @@ struct Page01 {
         if (this.ishowtitle) {
           TitleComponent()
         } else {
-
           Text('test title was been removed')
             .fontSize(50)
             .fontWeight(FontWeight.Bold)

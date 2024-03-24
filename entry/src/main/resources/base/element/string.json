@@ -83,6 +83,14 @@
     {
       "name": "appDesc",
       "value": "App description"
+    },
+    {
+      "name": "DocumentAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "DocumentAbility_label",
+      "value": "label"
     }
   ]
 }

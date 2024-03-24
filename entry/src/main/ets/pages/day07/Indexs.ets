@@ -107,12 +107,14 @@ struct Index {
             Text('北京').fontColor(Color.White)
             Text('晴 2℃').fontColor(Color.White)
           }
+
           Row() {
             Image($r('app.media.down_arrow')).width(12).fillColor(Color.White)
           }.alignItems(VerticalAlign.Top).height('100%').margin({
             top: 15
           })
         }
+
         Row() {
           Image($r('app.media.search')).width(15).height(15).margin({
             left: 5
@@ -130,6 +132,7 @@ struct Index {
             .fontColor(Color.Blue)
             .borderRadius(10)
         }.backgroundColor(Color.White).borderRadius(10).layoutWeight(1)
+
         Row() {
           Image($r('app.media.add')).height(30).width(30).fillColor(Color.White)
         }
@@ -148,6 +151,7 @@ struct Index {
         right: 10,
         left: 10
       })
+
       // 滑动区
       Scroll() {
         Column() {
@@ -173,6 +177,7 @@ struct Index {
               Text('卡包').fontColor(Color.White)
             }
           }.width('100%').justifyContent(FlexAlign.SpaceAround).backgroundColor('#118AD3').padding(20)
+
           //小程序栏
           Column({
             space: 10
@@ -195,23 +200,32 @@ struct Index {
             topLeft: 10,
             topRight: 10
           })
-          // 猫猫地区
-          ForEach(['', '', '',''], (item: string, index) => {
-            Row({
-              space: 5
-            }) {
-              ForEach(['', '', ''], (item: string, index) => {
-                Image($r('app.media.cat')).layoutWeight(1).borderRadius(10)
-              })
 
-            }.padding(10)
-          })
+          // 猫猫地区
+          Row() {
+            ForEach(['app.media.zfb_pro_pic1', 'app.media.zfb_pro_pic2', 'app.media.zfb_pro_pic3'], (item: string, index: number) => {
+              Image($r(item)).layoutWeight(1).borderRadius(10).margin(3)
+            })
+
+
+          }.width('100%')
+
+          Column() {
+            ForEach(['app.media.zfb_pro_list1','app.media.zfb_pro_list2'], (item: string, index: number) => {
+              Image($r(item)).margin(3)
+            })
+          }
         }.justifyContent(FlexAlign.Start)
-      }.backgroundColor('#ddd').layoutWeight(1).position({
+      }
+      .backgroundColor('#ddd')
+      .layoutWeight(1)
+      .position({
         y: 60
-      }).height(660).border({
-        width:1,
-        style:BorderStyle.Solid
+      })
+      .height(660)
+      .border({
+        width: 1,
+        style: BorderStyle.Solid
       })
 
       // 底部

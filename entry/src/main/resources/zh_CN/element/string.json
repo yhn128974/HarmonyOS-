@@ -83,6 +83,14 @@
     {
       "name": "appDesc",
       "value": "应用描述"
+    },
+    {
+      "name": "DocumentAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "DocumentAbility_label",
+      "value": "label"
     }
   ]
 }
