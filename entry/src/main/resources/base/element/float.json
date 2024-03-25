@@ -35,6 +35,18 @@
     {
       "name": "main_padding_right",
       "value": "12vp"
+    },
+    {
+      "name": "button_width",
+      "value": "300vp"
+    },
+    {
+      "name": "button_height",
+      "value": "40vp"
+    },
+    {
+      "name": "login_fontSize",
+      "value": "18fp"
     }
   ]
 }

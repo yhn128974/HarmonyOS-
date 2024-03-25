@@ -1,5 +1,11 @@
 {
   "module": {
+    //    允许访问网络
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.INTERNET"
+      }
+    ],
     "name": "entry",
     "type": "entry",
     //    入口舞台
@@ -14,7 +20,6 @@
     "deliveryWithInstall": true,
     "installationFree": false,
     "pages": "$profile:main_pages",
-
     "abilities": [
       {
         "name": "EntryAbility",

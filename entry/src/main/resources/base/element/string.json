@@ -91,6 +91,10 @@
     {
       "name": "DocumentAbility_label",
       "value": "label"
+    },
+    {
+      "name": "login_text",
+      "value": "登录"
     }
   ]
 }

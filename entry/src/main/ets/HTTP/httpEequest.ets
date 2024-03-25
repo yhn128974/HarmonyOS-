@@ -1,4 +1,6 @@
 import http from '@ohos.net.http';
+import router from '@ohos.router';
+
 
 
 export function get_http_url() {
