@@ -11,12 +11,11 @@ struct Index {
           Row({
             space: 10
           }) {
-            Button('登录').backgroundColor(Color.Red).borderRadius(15).height(25)
+            Button('登录').backgroundColor('#ea5c5b').borderRadius(15).height(25)
             Image($r('app.media.ic_close')).width(14).onClick((event: ClickEvent) => {
               this.inHide = !this.inHide
             }).fillColor(Color.White)
           }
-
         }
         .height(34)
         .width('80%')
