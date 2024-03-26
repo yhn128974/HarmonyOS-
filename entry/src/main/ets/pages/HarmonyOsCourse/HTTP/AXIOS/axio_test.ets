@@ -66,17 +66,20 @@ interface weatherINFO {
 //     console.error("result:" + error.message);
 //   })
 
+
 // 支持async/await用法
 async function getUser() {
   try {
-    const response: AxiosResponse = await axios.get<weatherINFO, AxiosResponse<weatherINFO>, null>('http://t.weather.sojson.com/api/weather/city/101030100');
+
+    const response: AxiosResponse<weatherINFO> = await axios.get<weatherINFO, AxiosResponse<weatherINFO>, null>('http://t.weather.sojson.com/api/weather/city/101030100');
+
     console.log(JSON.stringify(response));
+
   } catch (error) {
     console.error(JSON.stringify(error));
   }
 }
 
-getUser()
 
 @Entry
 @Component
