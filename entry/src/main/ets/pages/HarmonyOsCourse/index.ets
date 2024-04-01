@@ -1,7 +1,7 @@
+import { router } from '@kit.ArkUI'
 
 
-
-interface router {
+interface routerINTERFACE {
   url: string,
   title: string,
 }
@@ -9,27 +9,24 @@ interface router {
 @Entry
 @Component
 struct Index {
-  @State routers: router[] = [{
+  @State routers: routerINTERFACE[] = [{
     url: 'pages/HarmonyOsCourse/simple_page_component/animation/animation"',
     title: '动画',
-  }
-
+  },
   ]
 
   build() {
     Row() {
       Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-
         List() {
-          ForEach(this.routers, (item: router, index) => {
+          ForEach(this.routers, (item: routerINTERFACE, index) => {
             Row() {
               Text(item.url)
 
-            }.with('100%').onclick(() =>{
-              router
+            }.width('100%').onClick(() => {
+              router.pushUrl({
+                url: item.title
+              })
             })
           })
         }

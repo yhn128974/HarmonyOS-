@@ -2,7 +2,6 @@
 @Component
 struct Index {
   @State message: string = 'Hello World';
-
   build() {
     Row() {
       Column() {
@@ -15,3 +14,5 @@ struct Index {
     .height('100%')
   }
 }
+
+console.log(""+Math.floor(Math.random()*3+5) );

@@ -2,7 +2,7 @@
 @Component
 struct Index {
   @State message: string = 'Hello World';
-
+@State buttontest: string = '+关注'
   build() {
     Column() {
       Row() {
@@ -16,11 +16,13 @@ struct Index {
             left: 10,
             right: 10
           })
-          Button('+ 关注').onClick((event: ClickEvent) => {
+          Button(this.buttontest).onClick((event: ClickEvent) => {
 
           }).backgroundColor('#f92b13').linearGradient({
             angle: 90,
             colors: [['#f92b13', 1], ['#e90009', 1]]
+          }).onClick(()=>{
+            this.buttontest='已关注'
           })
         }
         .height(30)
